@@ -15,9 +15,9 @@ export function StoreTypeProvider({ children }: { children: ReactNode }) {
   const [storeType, setStoreType] = useState<StoreType>(() => {
     if (typeof window !== "undefined") {
       const saved = localStorage.getItem("storeType");
-      return (saved as StoreType) || "clothing";
+      return (saved as StoreType) || "electronics";
     }
-    return "clothing";
+    return "electronics";
   });
 
   useEffect(() => {
